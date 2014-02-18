@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTViewController : UIViewController
+@interface CTMainViewController : UIViewController
+
+- (IBAction)showModalButtonDidPress:(id)sender;
+- (IBAction)pushButtonDidPress:(id)sender;
 
 @end
