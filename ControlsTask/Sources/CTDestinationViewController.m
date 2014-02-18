@@ -10,7 +10,7 @@
 
 @interface CTDestinationViewController()
 
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel* textLabel;
 
 @end
 
@@ -19,14 +19,6 @@
 - (void)viewDidLoad
 {
 	[self.textLabel setText:self.text];
-}
-
-- (IBAction)okButtonDidPressed:(id)sender
-{
-	[self dismissViewControllerAnimated:YES completion:
-	 ^{
-		 NSLog(@"Modal sheet dismissed");
-	 }];
 }
 
 @end

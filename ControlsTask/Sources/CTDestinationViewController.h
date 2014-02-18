@@ -10,7 +10,6 @@
 
 @interface CTDestinationViewController : UIViewController
 
-@property (nonatomic, copy) NSString *text;
-@property (weak, nonatomic) IBOutlet UIButton *okButton;
+@property (nonatomic, copy) NSString* text;
 
 @end

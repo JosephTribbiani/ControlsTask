@@ -10,11 +10,11 @@
 #import "CTDestinationViewController.h"
 #import "CTChildViewController.h"
 
-#define animationDuration 0.3
+#define kAnimationDuration 0.3
 
-@interface CTMainViewController () <CTChildViewControllerDelegate>
+@interface CTMainViewController ()<CTChildViewControllerDelegate>
 
-@property (nonatomic, retain) UIViewController *childViewController;
+@property (nonatomic, retain) UIViewController* childViewController;
 
 @end
 
@@ -36,7 +36,7 @@
 
 - (IBAction)showModalButtonDidTapped:(id)sender
 {
-	UIViewController *destinationViewController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"tabBarViewController"];
+	UIViewController* destinationViewController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"tabBarViewController"];
 	
 	[self.navigationController presentViewController:destinationViewController animated:YES completion:
 	^{
@@ -46,7 +46,7 @@
 
 - (IBAction)pushButtonDidTapped:(id)sender
 {
-	CTDestinationViewController *destinationViewController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"modalViewController"];
+	CTDestinationViewController* destinationViewController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"modalViewController"];
 	destinationViewController.text = @"Push View Controller";
 	
 	[self.navigationController pushViewController:destinationViewController animated:YES];
@@ -57,11 +57,11 @@
 	[self performSegueWithIdentifier:@"pushToDestinationViewController" sender:self];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
 	if ([[segue identifier] isEqualToString:@"pushToDestinationViewController"])
 	{
-		CTDestinationViewController *destinationViewController = [segue destinationViewController];
+		CTDestinationViewController* destinationViewController = [segue destinationViewController];
 		destinationViewController.text = @"pushed with segue";
 	}
 }
@@ -74,7 +74,7 @@
 	}
 	else
 	{
-		CTChildViewController *childViewController = [[CTChildViewController alloc] initWithNibName:@"CTChildViewController" bundle:nil];
+		CTChildViewController* childViewController = [[CTChildViewController alloc] initWithNibName:@"CTChildViewController" bundle:nil];
 		childViewController.delegate = self;
 		[self displayContentController:childViewController];
 	}
@@ -95,7 +95,7 @@
 	startFrame.origin.y = CGRectGetHeight(self.view.frame);
 	childViewController.view.frame = startFrame;
 	
-	[UIView animateWithDuration:animationDuration animations:^
+	[UIView animateWithDuration:kAnimationDuration animations:^
 	{
 		childViewController.view.frame = endFrame;
 		[self.view addSubview:childViewController.view];
@@ -110,8 +110,8 @@
 	CGRect endFrame = childViewController.view.frame;
 	endFrame.size.height = 0;
 	endFrame.origin.y = CGRectGetHeight(self.view.frame);
-	
-	[UIView animateWithDuration:animationDuration animations:^
+    
+	[UIView animateWithDuration:kAnimationDuration animations:^
 	{
 		childViewController.view.frame = endFrame;
 	}
@@ -126,7 +126,7 @@
 
 #pragma mark - ChildViewControllerDelegate
 
-- (void)hideButtonDidTapped:(CTChildViewController *)childViewController
+- (void)hideButtonDidTapped:(CTChildViewController*)childViewController
 {
 	[self hideContentController:childViewController];
 }
