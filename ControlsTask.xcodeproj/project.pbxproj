@@ -25,7 +25,6 @@
 		D8EE5F8518B37344009D3DBB /* CTDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE5F8418B37344009D3DBB /* CTDestinationViewController.m */; };
 		D8EE5F8818B3818F009D3DBB /* CTTabBarItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE5F8718B3818F009D3DBB /* CTTabBarItemViewController.m */; };
 		D8EE5F8F18B39C09009D3DBB /* CTChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE5F8D18B39C09009D3DBB /* CTChildViewController.m */; };
-		D8EE5F9018B39C09009D3DBB /* CTChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EE5F8E18B39C09009D3DBB /* CTChildViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,7 @@
 		D8EE5F5718B36911009D3DBB /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CTAppDelegate.m; path = Sources/CTAppDelegate.m; sourceTree = "<group>"; };
 		D8EE5F5A18B36911009D3DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		D8EE5F5D18B36911009D3DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		D8EE5F5F18B36911009D3DBB /* CTMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTMainViewController.h; path = Sources/CTMainViewController.h; sourceTree = "<group>"; };
+		D8EE5F5F18B36911009D3DBB /* CTChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CTChildViewController.xib; path = Resources/Base.lproj/CTChildViewController.xib; sourceTree = "<group>"; };
 		D8EE5F6018B36911009D3DBB /* CTMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CTMainViewController.m; path = Sources/CTMainViewController.m; sourceTree = "<group>"; };
 		D8EE5F6218B36911009D3DBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		D8EE5F6818B36911009D3DBB /* ControlsTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlsTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +64,7 @@
 		D8EE5F8718B3818F009D3DBB /* CTTabBarItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTTabBarItemViewController.m; path = Sources/CTTabBarItemViewController.m; sourceTree = "<group>"; };
 		D8EE5F8C18B39C09009D3DBB /* CTChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTChildViewController.h; path = Sources/CTChildViewController.h; sourceTree = "<group>"; };
 		D8EE5F8D18B39C09009D3DBB /* CTChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTChildViewController.m; path = Sources/CTChildViewController.m; sourceTree = "<group>"; };
-		D8EE5F8E18B39C09009D3DBB /* CTChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CTChildViewController.xib; path = Sources/CTChildViewController.xib; sourceTree = "<group>"; };
+		D8EE5F9118B3B427009D3DBB /* CTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTMainViewController.h; path = Sources/CTMainViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +166,7 @@
 			children = (
 				D8EE5F5618B36911009D3DBB /* CTAppDelegate.h */,
 				D8EE5F5718B36911009D3DBB /* CTAppDelegate.m */,
-				D8EE5F5F18B36911009D3DBB /* CTMainViewController.h */,
+				D8EE5F9118B3B427009D3DBB /* CTMainViewController.h */,
 				D8EE5F6018B36911009D3DBB /* CTMainViewController.m */,
 				D8EE5F8318B37344009D3DBB /* CTDestinationViewController.h */,
 				D8EE5F8418B37344009D3DBB /* CTDestinationViewController.m */,
@@ -193,7 +192,7 @@
 			children = (
 				D8EE5F5918B36911009D3DBB /* Main_iPhone.storyboard */,
 				D8EE5F5C18B36911009D3DBB /* Main_iPad.storyboard */,
-				D8EE5F8E18B39C09009D3DBB /* CTChildViewController.xib */,
+				D8EE5F5F18B36911009D3DBB /* CTChildViewController.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -277,7 +276,6 @@
 			files = (
 				D8EE5F5E18B36911009D3DBB /* Main_iPad.storyboard in Resources */,
 				D8EE5F6318B36911009D3DBB /* Images.xcassets in Resources */,
-				D8EE5F9018B39C09009D3DBB /* CTChildViewController.xib in Resources */,
 				D8EE5F5B18B36911009D3DBB /* Main_iPhone.storyboard in Resources */,
 				D8EE5F5218B36911009D3DBB /* InfoPlist.strings in Resources */,
 			);
