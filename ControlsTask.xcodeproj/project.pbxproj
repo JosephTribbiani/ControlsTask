@@ -43,13 +43,13 @@
 		D8EE5F5118B36911009D3DBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8EE5F5318B36911009D3DBB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8EE5F5518B36911009D3DBB /* ControlsTask-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControlsTask-Prefix.pch"; sourceTree = "<group>"; };
-		D8EE5F5618B36911009D3DBB /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
-		D8EE5F5718B36911009D3DBB /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
+		D8EE5F5618B36911009D3DBB /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTAppDelegate.h; path = Sources/CTAppDelegate.h; sourceTree = "<group>"; };
+		D8EE5F5718B36911009D3DBB /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CTAppDelegate.m; path = Sources/CTAppDelegate.m; sourceTree = "<group>"; };
 		D8EE5F5A18B36911009D3DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		D8EE5F5D18B36911009D3DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		D8EE5F5F18B36911009D3DBB /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
-		D8EE5F6018B36911009D3DBB /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
-		D8EE5F6218B36911009D3DBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D8EE5F5F18B36911009D3DBB /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTViewController.h; path = Sources/CTViewController.h; sourceTree = "<group>"; };
+		D8EE5F6018B36911009D3DBB /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CTViewController.m; path = Sources/CTViewController.m; sourceTree = "<group>"; };
+		D8EE5F6218B36911009D3DBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		D8EE5F6818B36911009D3DBB /* ControlsTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlsTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EE5F6918B36911009D3DBB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D8EE5F7118B36911009D3DBB /* ControlsTaskTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ControlsTaskTests-Info.plist"; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D8EE5F4D18B36911009D3DBB /* ControlsTask */,
+				D8EE5F4E18B36911009D3DBB /* Supporting Files */,
 				D8EE5F6F18B36911009D3DBB /* ControlsTaskTests */,
 				D8EE5F4618B36911009D3DBB /* Frameworks */,
 				D8EE5F4518B36911009D3DBB /* Products */,
@@ -114,14 +115,8 @@
 		D8EE5F4D18B36911009D3DBB /* ControlsTask */ = {
 			isa = PBXGroup;
 			children = (
-				D8EE5F5618B36911009D3DBB /* CTAppDelegate.h */,
-				D8EE5F5718B36911009D3DBB /* CTAppDelegate.m */,
-				D8EE5F5918B36911009D3DBB /* Main_iPhone.storyboard */,
-				D8EE5F5C18B36911009D3DBB /* Main_iPad.storyboard */,
-				D8EE5F5F18B36911009D3DBB /* CTViewController.h */,
-				D8EE5F6018B36911009D3DBB /* CTViewController.m */,
-				D8EE5F6218B36911009D3DBB /* Images.xcassets */,
-				D8EE5F4E18B36911009D3DBB /* Supporting Files */,
+				D8EE5F7F18B36A2E009D3DBB /* Sources */,
+				D8EE5F8118B36A49009D3DBB /* Resources */,
 			);
 			path = ControlsTask;
 			sourceTree = "<group>";
@@ -135,6 +130,7 @@
 				D8EE5F5518B36911009D3DBB /* ControlsTask-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = ControlsTask;
 			sourceTree = "<group>";
 		};
 		D8EE5F6F18B36911009D3DBB /* ControlsTaskTests */ = {
@@ -153,6 +149,35 @@
 				D8EE5F7218B36911009D3DBB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8EE5F7F18B36A2E009D3DBB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE5F5618B36911009D3DBB /* CTAppDelegate.h */,
+				D8EE5F5718B36911009D3DBB /* CTAppDelegate.m */,
+				D8EE5F5F18B36911009D3DBB /* CTViewController.h */,
+				D8EE5F6018B36911009D3DBB /* CTViewController.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		D8EE5F8118B36A49009D3DBB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE5F8218B36ADC009D3DBB /* Interfaces */,
+				D8EE5F6218B36911009D3DBB /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D8EE5F8218B36ADC009D3DBB /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE5F5918B36911009D3DBB /* Main_iPhone.storyboard */,
+				D8EE5F5C18B36911009D3DBB /* Main_iPad.storyboard */,
+			);
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +310,7 @@
 				D8EE5F5118B36911009D3DBB /* en */,
 			);
 			name = InfoPlist.strings;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D8EE5F5918B36911009D3DBB /* Main_iPhone.storyboard */ = {
@@ -293,6 +319,7 @@
 				D8EE5F5A18B36911009D3DBB /* Base */,
 			);
 			name = Main_iPhone.storyboard;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D8EE5F5C18B36911009D3DBB /* Main_iPad.storyboard */ = {
@@ -301,6 +328,7 @@
 				D8EE5F5D18B36911009D3DBB /* Base */,
 			);
 			name = Main_iPad.storyboard;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D8EE5F7218B36911009D3DBB /* InfoPlist.strings */ = {
