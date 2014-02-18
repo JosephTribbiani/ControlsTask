@@ -12,7 +12,7 @@
 
 #define kAnimationDuration 0.3
 
-@interface CTMainViewController ()<CTChildViewControllerDelegate>
+@interface CTMainViewController() <CTChildViewControllerDelegate>
 
 @property (nonatomic, retain) UIViewController* childViewController;
 
