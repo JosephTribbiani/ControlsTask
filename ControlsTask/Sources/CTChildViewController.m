@@ -39,17 +39,7 @@
 
 - (IBAction)hideButtonDidTapped:(id)sender
 {
-	[self.delegate hideButtonDidPressed:self];
-}
-
-- (void)willMoveToParentViewController:(UIViewController *)parent
-{
-	
-}
-
-- (void)didMoveToParentViewController:(UIViewController *)parent
-{
-	
+	[self.delegate hideButtonDidTapped:self];
 }
 
 @end

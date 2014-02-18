@@ -17,29 +17,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL3-nG-HPM">
-                                <rect key="frame" x="20" y="180" width="128" height="30"/>
+                                <rect key="frame" x="20" y="199" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Modal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showModalButtonDidPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r96-yn-W0l"/>
+                                    <action selector="showModalButtonDidTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GzL-Pe-fd3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unf-pF-Mp8">
-                                <rect key="frame" x="172" y="180" width="128" height="30"/>
+                                <rect key="frame" x="172" y="199" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Push">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushButtonDidPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PJ4-Fl-cxs"/>
+                                    <action selector="pushButtonDidTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NmX-rY-s46"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpT-3y-ZrG">
-                                <rect key="frame" x="20" y="218" width="128" height="30"/>
+                                <rect key="frame" x="20" y="237" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Segue Push">
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-dB-DCT">
-                                <rect key="frame" x="172" y="218" width="128" height="30"/>
+                                <rect key="frame" x="172" y="237" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Segue with ID">
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiG-79-fL4">
-                                <rect key="frame" x="20" y="256" width="128" height="30"/>
+                                <rect key="frame" x="20" y="275" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Child">
@@ -70,30 +70,6 @@
                                 <connections>
                                     <action selector="childButtonDidTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f7y-m1-zak"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwi-9R-y7U">
-                                <rect key="frame" x="172" y="256" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQo-Rv-YsT">
-                                <rect key="frame" x="20" y="294" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqV-Uy-5er">
-                                <rect key="frame" x="172" y="294" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -175,7 +151,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonDidTapped:" destination="hTQ-sp-GZZ" eventType="touchUpInside" id="orC-t5-bLv"/>
-                                    <action selector="pushButtonDidPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="C6Q-e3-mgw"/>
+                                    <action selector="pushButtonDidTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OTB-K1-zuZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j75-IC-1JJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="-1945"/>
+            <point key="canvasLocation" x="544" y="-1811"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gdo-EH-7RQ">
@@ -205,7 +181,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZH3-mK-dit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="-1300"/>
+            <point key="canvasLocation" x="10" y="-1166"/>
         </scene>
         <!--Tab Bar Item View Controller - Item 2-->
         <scene sceneID="53V-fz-N6u">
@@ -234,7 +210,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonDidTapped:" destination="aYM-O9-YbD" eventType="touchUpInside" id="I5t-5a-Lq9"/>
-                                    <action selector="pushButtonDidPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="blP-Zl-QIP"/>
+                                    <action selector="pushButtonDidTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hWu-XB-bDg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f25-rN-ece" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="-1300"/>
+            <point key="canvasLocation" x="544" y="-1166"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LEj-4z-iRQ">
@@ -291,7 +267,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonDidTapped:" destination="eHF-lU-lGb" eventType="touchUpInside" id="fzJ-S4-1Uu"/>
-                                    <action selector="pushButtonDidPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Oi-KP-uZ6"/>
+                                    <action selector="pushButtonDidTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rzh-Ws-JXx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -301,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcY-gF-ZaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="-638"/>
+            <point key="canvasLocation" x="554" y="-504"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

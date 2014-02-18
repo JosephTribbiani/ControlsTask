@@ -12,7 +12,7 @@
 
 @protocol CTChildViewControllerDelegate <NSObject>
 
-- (void)hideButtonDidPressed:(CTChildViewController *)childViewController;
+- (void)hideButtonDidTapped:(CTChildViewController *)childViewController;
 
 @end
 

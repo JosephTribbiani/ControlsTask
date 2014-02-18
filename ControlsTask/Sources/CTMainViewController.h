@@ -10,7 +10,7 @@
 
 @interface CTMainViewController : UIViewController
 
-- (IBAction)showModalButtonDidPress:(id)sender;
-- (IBAction)pushButtonDidPress:(id)sender;
+- (IBAction)showModalButtonDidTapped:(id)sender;
+- (IBAction)pushButtonDidTapped:(id)sender;
 
 @end

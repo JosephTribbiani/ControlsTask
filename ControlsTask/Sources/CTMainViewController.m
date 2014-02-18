@@ -10,7 +10,11 @@
 #import "CTDestinationViewController.h"
 #import "CTChildViewController.h"
 
+#define animationDuration 0.3
+
 @interface CTMainViewController () <CTChildViewControllerDelegate>
+
+@property (nonatomic, retain) UIViewController *childViewController;
 
 @end
 
@@ -30,17 +34,17 @@
 
 #pragma mark - Actions
 
-- (IBAction)showModalButtonDidPress:(id)sender
+- (IBAction)showModalButtonDidTapped:(id)sender
 {
 	UIViewController *destinationViewController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"tabBarViewController"];
 	
 	[self.navigationController presentViewController:destinationViewController animated:YES completion:
 	^{
-		 NSLog(@"Modal view copntroller presented");
+		 NSLog(@"Modal view controller presented");
 	}];
 }
 
-- (IBAction)pushButtonDidPress:(id)sender
+- (IBAction)pushButtonDidTapped:(id)sender
 {
 	CTDestinationViewController *destinationViewController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"modalViewController"];
 	destinationViewController.text = @"Push View Controller";
@@ -64,9 +68,16 @@
 
 - (IBAction)childButtonDidTapped:(id)sender
 {
-	CTChildViewController *childViewController = [[CTChildViewController alloc] initWithNibName:@"CTChildViewController" bundle:nil];
-	childViewController.delegate = self;
-	[self displayContentController:childViewController];
+	if (self.childViewController)
+	{
+		[self hideContentController:self.childViewController];
+	}
+	else
+	{
+		CTChildViewController *childViewController = [[CTChildViewController alloc] initWithNibName:@"CTChildViewController" bundle:nil];
+		childViewController.delegate = self;
+		[self displayContentController:childViewController];
+	}
 }
 
 #pragma mark - ChildViewController related
@@ -84,12 +95,12 @@
 	startFrame.origin.y = CGRectGetHeight(self.view.frame);
 	childViewController.view.frame = startFrame;
 	
-	[UIView animateWithDuration:0.3 animations:^
+	[UIView animateWithDuration:animationDuration animations:^
 	{
 		childViewController.view.frame = endFrame;
 		[self.view addSubview:childViewController.view];
 	}];
-	
+	self.childViewController = childViewController;
 	[childViewController didMoveToParentViewController:self];
 }
 
@@ -100,7 +111,7 @@
 	endFrame.size.height = 0;
 	endFrame.origin.y = CGRectGetHeight(self.view.frame);
 	
-	[UIView animateWithDuration:0.3 animations:^
+	[UIView animateWithDuration:animationDuration animations:^
 	{
 		childViewController.view.frame = endFrame;
 	}
@@ -108,13 +119,14 @@
 	{
 		[childViewController.view removeFromSuperview];
 		[childViewController removeFromParentViewController];
+		self.childViewController = nil;
 		[childViewController didMoveToParentViewController:nil];
 	}];
 }
 
 #pragma mark - ChildViewControllerDelegate
 
-- (void)hideButtonDidPressed:(CTChildViewController *)childViewController
+- (void)hideButtonDidTapped:(CTChildViewController *)childViewController
 {
 	[self hideContentController:childViewController];
 }
